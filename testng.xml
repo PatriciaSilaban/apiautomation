@@ -6,6 +6,7 @@
             <classes>
                 <class name="ParallelTestNG" />
                 <class name="ParallelTestNG2" />
+                <class name="testng.TestNG" />
             </classes>
         </test>
     </suite>
