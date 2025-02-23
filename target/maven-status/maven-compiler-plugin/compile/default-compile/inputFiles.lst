@@ -1,2 +1,9 @@
 C:\apiautomation\apiautomation\src\main\java\com\apiautomation\Main.java
+C:\apiautomation\apiautomation\src\main\java\com\apiautomation\model\addObjectResponse.java
+C:\apiautomation\apiautomation\src\main\java\com\apiautomation\model\deleteObjectResponse.java
+C:\apiautomation\apiautomation\src\main\java\com\apiautomation\model\getListOfAllObjectResponse.java
+C:\apiautomation\apiautomation\src\main\java\com\apiautomation\model\getListOfObjectByIDSResponse.java
+C:\apiautomation\apiautomation\src\main\java\com\apiautomation\model\getListSingleObjectResponse.java
 C:\apiautomation\apiautomation\src\main\java\com\apiautomation\model\ResponseItem.java
+C:\apiautomation\apiautomation\src\main\java\com\apiautomation\model\updateObjectResponse.java
+C:\apiautomation\apiautomation\src\main\java\com\apiautomation\model\updatePartiallyObjectResponse.java
