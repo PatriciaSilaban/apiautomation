@@ -60,6 +60,7 @@ public class ValidationTest {
                 .when()
                 .post("{path}/{method}");
         System.out.println("add product" + response.asPrettyString());
+
         /*
          * Response :
          * {
@@ -102,16 +103,28 @@ public class ValidationTest {
 
     }
 
-    @Test
     public void createObject() {
         String json = "{\n" + //
-                "   \"name\": \"Apple MacBook Pro 16\",\n" + //
-                "   \"data\": {\n" + //
-                "      \"year\": 2019,\n" + //
-                "      \"price\": 20000,\n" + //
-                "      \"CPU model\": \"Intel Core i9\",\n" + //
-                "      \"Hard disk size\": \"1 TB\"\n" + //
-                "   }\n" + //
+                " \"name\": \"Apple MacBook Pro 16\",\n" + //
+                " \"data\": {\n" + //
+                " \"year\": 2019,\n" + //
+                " \"price\": 20000,\n" + //
+                " \"CPU model\": \"Intel Core i9\",\n" + //
+                " \"Hard disk size\": \"1 TB\"\n" + //
+                " }\n" + //
+                "}";
+    }
+
+    @Test
+    public void addObject() {
+        String json = "{\n" + //
+                " \"name\": \"Apple MacBook Pro 16\",\n" + //
+                " \"data\": {\n" + //
+                " \"year\": 2019,\n" + //
+                " \"price\": 20000,\n" + //
+                " \"CPU model\": \"Intel Core i9\",\n" + //
+                " \"Hard disk size\": \"1 TB\"\n" + //
+                " }\n" + //
                 "}";
 
         RestAssured.baseURI = "https://api.restful-api.dev";
@@ -144,28 +157,13 @@ public class ValidationTest {
          * "CPU model1": "Intel Core i9",
          * "Hard disk size1": "1 TB",
          * },
-         * {
-         * "year1": 2019,
-         * "price1": 1849.99,
-         * "CPU model1": "Intel Core i9",
-         * "Hard disk size1": "1 TB",
-         * },
-         * {
-         * "year1": 2019,
-         * "price1": 1849.99,
-         * "CPU model1": "Intel Core i9",
-         * "Hard disk size1": "1 TB",
-         * }]
-         * }
-         * }
-         * String year1 = jsonPath.getString("data.object.year1");
          */
 
         JsonPath jsonPath = response.jsonPath();
 
         // Cara Pertama
         String id = jsonPath.getString("id");
-        String name = jsonPath.getString("title");
+        String name = jsonPath.getString("name");
         String createdAt = jsonPath.getString("createdAt");
         int year = jsonPath.getInt("data.year");
         int price = jsonPath.getInt("data.price");
@@ -194,7 +192,7 @@ public class ValidationTest {
 
     /*
      * Kekurangan:
-     * 1. Ketika terjadi perubahan path, kita perlu trace semua tc
+     * 1. Ketika terjadi perubahan path, perlu trace semua tc
      * 2. Susah maintenance
      */
 }
