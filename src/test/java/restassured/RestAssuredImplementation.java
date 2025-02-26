@@ -32,9 +32,19 @@ public class RestAssuredImplementation {
          * Define baseURI = https://api.restful-api.dev/objects?id=3&id=5&id=10
          */
 
+         /*
+          * Karena ini termasuk dengan query param jadi bisa pakai 
+          .queryparam y
+          */
+
         RestAssured.baseURI = "https://api.restful-api.dev";
         RequestSpecification requestSpecification = RestAssured.given();
-        Response response = requestSpecification.log().all().get("objects?id=3&id=5&id=10");
+        Response response = requestSpecification
+                            .log()
+                            .all()
+                            .queryParam("id", 3,5,10)
+                            .pathParam("path", "objects")
+                            .get("{path}");
         System.out.println("get List Of Objects By IDS" + response.asPrettyString());
     }
 
