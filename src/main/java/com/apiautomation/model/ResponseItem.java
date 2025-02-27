@@ -24,14 +24,13 @@ public class ResponseItem {
      */
 
     @JsonProperty("id")
-
     public String id;
 
     @JsonProperty("title")
     public String title;
 
     @JsonProperty("price")
-    public int price;
+    public float price;
 
     @JsonProperty("discountPercentage")
     public int discountPercentage;
