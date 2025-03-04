@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="7.133" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-02-27T17:29:42.715447500Z">
-<testcase classname="Add object a List" name="As a user I can add new data - #1.1" time="5.567">
+<testsuite name="Cucumber" time="11.916" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-03-04T10:43:18.435345Z">
+<testcase classname="Add object a List" name="As a user I can add new data" time="7.45">
+<system-out><![CDATA[
+Given A list of item are available..........................................passed
+When I add item to list.....................................................passed
+Then The item is available..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add object a List" name="As a user I can add new data - #1.1" time="1.549">
 <system-out><![CDATA[
 Given A list of item are available..........................................passed
 When I add item to list "addItem"...........................................passed
 Then The item is available..................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Add object a List" name="As a user I can add new data - #1.2" time="1.263">
+<testcase classname="Add object a List" name="As a user I can add new data - #1.2" time="2.554">
 <system-out><![CDATA[
 Given A list of item are available..........................................passed
 When I add item to list "addItem2"..........................................passed
