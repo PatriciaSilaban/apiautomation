@@ -7,11 +7,11 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/features", // lokasi features ada dimana //
-        glue = "stepdefinitions", plugin = { "pretty", // Pretty console output"
-                "html:target/cucumber-report.html", // HTML report
-                "json:target/cucumber-report.json", // JSON report
-                "junit:target/cucumber-report.xml" // JUnit XML report
-        })
+                glue = "stepdefinitions", plugin = { "pretty", // Pretty console output"
+                                "html:target/cucumber-report.html", // HTML report
+                                "json:target/cucumber-report.json", // JSON report
+                                "junit:target/cucumber-report.xml" // JUnit XML report
+                })
 
 public class TestRunner {
 

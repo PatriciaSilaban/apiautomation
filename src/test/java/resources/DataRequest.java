@@ -11,6 +11,8 @@ public class DataRequest {
      * 2. Value
      */
 
+    public static Object json;
+
     public Map<String, String> addItemCollection() {
         Map<String, String> dataCollection = new HashMap<>();
 
@@ -25,7 +27,7 @@ public class DataRequest {
                 "}");
 
         dataCollection.put("addItem2", "{\n" + //
-                " \"name\": \"Apple MacBook Pro 16\",\n" + //
+                " \"name\": \"Apple MacBook Pro 15\",\n" + //
                 " \"data\": {\n" + //
                 " \"year\": 2019,\n" + //
                 " \"price\": 20000,\n" + //
