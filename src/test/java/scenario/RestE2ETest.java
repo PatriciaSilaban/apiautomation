@@ -22,6 +22,23 @@ public class RestE2ETest {
          * 4. Verify new object is deleted (hit API single_object)
          */
 
+
+         /*
+          * Suggestion
+          * 1. Penamaan class itu harus diawali dengan huruf besar nya untuk huruf pertamanya 
+          * cth : addObjectResponse -> AddObjectResponse
+        * Mohon diperhatian penamaan variable nya ya, 
+        * Aturan untuk penamaan variable adalah harus bisa mendeskripsikan purpose dari variable itu sendiri contoh 
+        * JsonPath jsonPath2 = response2.jsonPath();
+        * alangkah baiknya 
+        * jsonPath2 => jsonGetResponseByPid
+        * response2 => responseGetResponseByPid
+        * 
+        * dan begitu seterusnya
+        */
+        
+        String idObject;
+
         @Test
         public void scenarioE2ETest() {
                 String json = "{\n" + //
@@ -59,7 +76,7 @@ public class RestE2ETest {
                 Assert.assertEquals(objectResponse.dataItem.cpuModel, "Intel Core i9");
                 Assert.assertEquals(objectResponse.dataItem.hardDiskSize, "1 TB");
 
-                String idObject = objectResponse.id;
+                idObject = objectResponse.id;
 
                 // Step 2 : Verify Object Exists (singleObject)
                 Response response2 = given()
